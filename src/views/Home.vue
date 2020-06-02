@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    <h1 class="text-4xl">Dragon Raja Color-Text Generator</h1>
     <div class="preview-box shadow">
-      <b>Preivew</b>
+      <b>Preivew</b><br>
       <p id='c-box' class="">
         
       </p>
@@ -21,7 +20,6 @@
         {{outputText}}
       </p>
       <button @click="copyText()"  class="copy-btn bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Copy Text</button>
-
     </div>
 
 
@@ -32,13 +30,13 @@
 <script>
 
 
-
 export default {
   data() {
     return {
       inputText: '',
       outputText: '',
-      charNum: 0
+      charNum: 0,
+      colors: '',
     }
   },
   methods: {
@@ -58,9 +56,12 @@ export default {
 
         
         // element.insertAdjacentElement('afterend', "<span>test</span")
-        document.getElementById('c-box').insertAdjacentHTML('beforeend', `<span class="${colors[i%colors.length]}">${input[i]}</span>`)
+        document.getElementById('c-box').insertAdjacentHTML('afterend', `<span class="${colors[i%colors.length]}">${input[i]}</span>`)
         // `<span class="${colors[i%colors.length]}">text test</span>`
+
       }
+
+      
     },
     charCount() {
       this.charNum = this.inputText.length
