@@ -1,7 +1,7 @@
 <template>
   <div class="home">
+    <b>Preivew</b><br>
     <div class="preview-box shadow">
-      <b>Preivew</b><br>
       <p id='c-box' class="">
         
       </p>
@@ -46,7 +46,7 @@ export default {
       let hex = ['E23838', 'F78200', 'FFB900', '5EBD3E', '973999', '009CDF']
       // let element = document.querySelector(".display-box");
       document.getElementById('c-box').innerHTML = ''
-      this.outputText = ''
+      
       console.log(input);
       for(let i=0; i < input.length; i++){
         
@@ -56,12 +56,12 @@ export default {
 
         
         // element.insertAdjacentElement('afterend', "<span>test</span")
-        document.getElementById('c-box').insertAdjacentHTML('afterend', `<span class="${colors[i%colors.length]}">${input[i]}</span>`)
+        document.getElementById('c-box').insertAdjacentHTML('beforeend', `<span class="${colors[i%colors.length]}">${input[i]}</span>`)
         // `<span class="${colors[i%colors.length]}">text test</span>`
 
       }
 
-      
+      this.inputText = ''
     },
     charCount() {
       this.charNum = this.inputText.length
@@ -80,6 +80,12 @@ export default {
       document.execCommand("copy");
       document.body.removeChild(elem);
       console.log('copied');
+
+      this.outputText = 'Copied'
+
+      setTimeout(() => {
+        this.outputText = ''
+      }, 5000);
     }
   },
 }
@@ -95,7 +101,7 @@ export default {
     box-sizing: border-box;
     padding: 30px;
     max-width: 600px;
-    margin: 40px auto;
+    margin: 20px auto;
   }
   .red{
     color: #E23838;
