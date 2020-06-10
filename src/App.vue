@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <h1 class="text-4xl">Dragon Raja Color-Text Generator</h1>
-    <p class="madelove">Made with <span class="material-icons">favorite</span> by Malice(S1)</p>
+    <p class="madelove">Made with <span class="material-icons">favorite</span> by Malice(S1) - ORCA</p>
     <div id="nav">
       <router-link to="/">Single Color Text</router-link> |
-      <router-link to="/rainbow-text">Rainbow Color Text</router-link>
+      <router-link to="/rainbow-text">Rainbow Color Text</router-link> |
+      <router-link to="/saved-text">Saved Text</router-link>
     </div>
     <router-view/>
   </div>
@@ -45,7 +46,7 @@
     color: #D32F2F;
   }
 }
-button:focus {
+input:focus, button:focus, textarea:focus {
   outline: none;
 }
 </style>

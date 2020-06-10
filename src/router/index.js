@@ -16,7 +16,12 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Premade',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Premade.vue')
+    component: () => import('../views/Premade.vue')
+  },
+  {
+    path: '/saved-text',
+    name: 'Saved Text',
+    component: () => import('../views/SaveMsg.vue')
   }
 ]
 
