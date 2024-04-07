@@ -1,24 +1,7 @@
 # dr-color-text
 
-## Project setup
-```
-npm install
-```
+A colored-text code generator for a popular mobile game, Dragon Raja. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Built with VueJS 2 and deployed on Netlify
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://raja-colortext.netlify.app/
